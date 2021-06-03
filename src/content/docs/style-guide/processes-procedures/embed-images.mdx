@@ -50,7 +50,7 @@ Use markdown to embed an image in a doc. The basic structure:
 ![alt text](<var>PATH_TO_IMAGE</var> "Image title text")`
 ```
 
-Here's a filled in example:
+Here's a filled-in example:
 
 ```
 ![An image showing an overview of the synthetics UI](./images/synthetics-ui-overview.png "Synthetics UI overview")`
@@ -82,24 +82,6 @@ From the Overview page, select your app's gear `![alt text](<var>PATH_TO_IMAGE</
 ```
 
 If the image is being used as an icon, always describe it first. When you embed the icon image, follow the image with the word "icon" in the text. For example, "select your app's gear ![icon-settings.png](./images/icon-settings.png "icon-settings.png") icon."
-
-## Add a fixed width, block level image [#fixed-width-img]
-
-Fixed width, block level images are similar in format to full column width images, except the original image width is smaller than the column width (800px) of a page. It's important that you edit the HTML like you would an inline image. This way the image will be rendered at 100% of the column width and also be responsive to smaller screen sizes.
-
-Use these images when a screenshot is a small part of the page with a width of less than 800px, but when it still needs a caption like a full width image.
-
-Here's an example of the HTML for a fixed width, block level image:
-
-```
-<div style="width: 100%; max-width: Npx;">
-	   <img alt="ALT TEXT" height="X" src="IMG_URL" title="FILENAME" width="N">
-	</div>
-	
-	<div class="dnd-legend-wrapper" style="width: 100%; max-width: Npx;">
-	   <div class="meta"><p>CAPTION TEXT</p></div>
-	</div>
-```
 
 ## Icons
 
