@@ -49,7 +49,7 @@ You can use the automated installer for servers, VMs, and unprivileged environme
 
 If your New Relic account [is in the EU region](/docs/using-new-relic/welcome-new-relic/get-started/our-eu-us-region-data-centers), access the installer from [one.eu.newrelic.com](http://one.eu.newrelic.com/launcher/k8s-cluster-explorer-nerdlet.cluster-explorer-launcher?pane=eyJuZXJkbGV0SWQiOiJucjEtaW5zdGFsbC1uZXdyZWxpYy5ucjEtaW5zdGFsbC1uZXdyZWxpYyIsInBhdGgiOiJndWlkZWQiLCJlbnYiOiJrdWJlcm5ldGVzIiwiaW5pdGlhbEFjdGlvbkluZGV4IjpudWxsLCJhY3Rpb25JbmRleCI6MX0=).
 
-## Installs for managed services and platforms [#cloud-platforms]
+## Installations for managed services and platforms [#cloud-platforms]
 
 Before starting our [automated installer](https://one.newrelic.com/launcher/k8s-cluster-explorer-nerdlet.cluster-explorer-launcher?pane=eyJuZXJkbGV0SWQiOiJucjEtaW5zdGFsbC1uZXdyZWxpYy5ucjEtaW5zdGFsbC1uZXdyZWxpYyIsInBhdGgiOiJndWlkZWQiLCJlbnYiOiJrdWJlcm5ldGVzIiwiaW5pdGlhbEFjdGlvbkluZGV4IjpudWxsLCJhY3Rpb25JbmRleCI6MX0=), check out these notes for your managed services or platforms:
 
@@ -62,6 +62,16 @@ Before starting our [automated installer](https://one.newrelic.com/launcher/k8s-
     The Kubernetes integration monitors worker nodes. In Amazon EKS, master nodes are managed by Amazon and abstracted from the Kubernetes platforms.
 
     Before starting our [automated installer](https://one.newrelic.com/launcher/k8s-cluster-explorer-nerdlet.cluster-explorer-launcher?pane=eyJuZXJkbGV0SWQiOiJucjEtaW5zdGFsbC1uZXdyZWxpYy5ucjEtaW5zdGFsbC1uZXdyZWxpYyIsInBhdGgiOiJndWlkZWQiLCJlbnYiOiJrdWJlcm5ldGVzIiwiaW5pdGlhbEFjdGlvbkluZGV4IjpudWxsLCJhY3Rpb25JbmRleCI6MX0=) to deploy the Kubernetes integration in Amazon EKS, make sure you are using the version of [`kubectl` provided by AWS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
+  </Collapser>
+
+  <Collapser
+    className="freq-link"
+    id="install-amazon-eks-fargate"
+    title={<><img src={eks} alt="EKS" style={{ verticalAlign: 'middle' }}/> <Link to="#install-amazon-eks-fargate"> Amazon EKS Fargate</Link></>}
+  >
+
+  For help installing our EKS Fargate integration, see these [setup options](/docs/integrations/kubernetes-integration/installation/install-fargate-integration).
+
   </Collapser>
 
   <Collapser
@@ -222,7 +232,7 @@ To prevent this scenario, you can configure the Kubernetes scheduler to give New
    kubectl get daemonsets
    ```
 
-## Unprivileged installs of the Kubernetes integration [#unprivileged]
+## Unprivileged installations of the Kubernetes integration [#unprivileged]
 
 For platforms that have stringent security requirements, we provide an unprivileged version of the Kubernetes integration. Changes from the standard Kubernetes integration are:
 
