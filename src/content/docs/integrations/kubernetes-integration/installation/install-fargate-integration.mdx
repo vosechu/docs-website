@@ -22,7 +22,7 @@ Just like for any other Kubernetes cluster, our solution still requires you to d
 
 Other components of the New Relic solution for Kubernetes, such as `nri-prometheus`, `nri-metadata-injection`, and `nri-kube-events`, do not have any particularities and will be deployed by our Helm Chart normally as they would in non-Fargate environments.
 
-<Callout variant="tip">
+<Callout variant="warning">
 New Relic Logging is not yet supported on Fargate nodes.
 </Callout>
 
@@ -76,7 +76,7 @@ Here's the injection workflow:
 #### Automatic injection installation [#auto-injection-install]
 
 <Callout variant="tip">
-These steps are for a default setup. Before completing these, we suggest you take a look at the [Configuration](#config-auto) section below to see if you want to modify any aspects of the automatic injection.
+The following steps are for a default setup. Before completing these, we suggest you take a look at the [Configuration](#config-auto) section below to see if you want to modify any aspects of the automatic injection.
 </Callout>
 
 In order to install the operator in charge of injecting the infrastructure sidecar, it is enough to run the following command. Please note that this command is the same one that is used for the general [installation command for `nri-kubernetes`](https://docs.newrelic.com/docs/integrations/kubernetes-integration/installation/install-kubernetes-integration-using-helm/#install-k8-helm), with two extra fargate-specific flags (highlighted):
@@ -357,11 +357,7 @@ To remove the injected container and the related resources, you just have to rem
 
 Notice that removing the sidecar container will cause the pod to be re-created.
 
-## Troubleshooting [#troubleshooting]
-
-Here are some tips if you have problems:
-
-### DaemonSet replicas are being deployed into Fargate nodes [#daemonset-replicas]
+## Troubleshooting: DaemonSet replicas are being deployed into Fargate nodes [#troubleshooting]
 
 If you notice that any Infra `DaemonSet` replicas are being scheduled on Fargate nodes, it might be because the `nodeAffinity` rules are not configured properly.
 
