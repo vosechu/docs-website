@@ -26,10 +26,6 @@ Requirements include:
 * A [New Relic license key](/docs/apis/intro-apis/new-relic-api-keys/#ingest-license-key)
 * For payload details, see [limits and restricted characters](#limits).
 
-<Callout variant="tip">
-  To use APIs and the rest of our [observability platform](https://one.newrelic.com), join the New Relic family! [Sign up](https://newrelic.com/signup) to create your free account in only a few seconds. Then ingest up to 100GB of data for free each month. Forever.
-</Callout>
-
 ## HTTP setup [#setup]
 
 To send log data to your New Relic account:
@@ -321,6 +317,10 @@ Some specific attributes have additional restrictions:
 * [`appId`](/docs/apis/rest-api-v2/requirements/find-product-id#apm): Value must be an integer. If it is not an integer, the attribute name and value will be dropped during ingest.
 * `eventType`: Can be a combination of alphanumeric characters, `_` underscores, and `:` colons.
 * `timestamp`: Must be a Unix epoch timestamp. You can define timestamps either in seconds or in milliseconds.
+
+<Callout variant="important">
+  Payloads with timestamps older than 48 hours may be dropped.
+</Callout>
 
 Rate limits on logs sent to the Log API:
 
