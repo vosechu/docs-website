@@ -70,7 +70,7 @@ This document provides examples and reference information for our API endpoints.
 
 ## Ingest APIs for core data types [#data-type-apis]
 
-We have [many solutions for reporting data](/docs/telemetry-data-platform/get-started/introduction-new-relic-data-ingest-apis-sdks), and our APIs are one of these ways. These APIs can be used directly, but they're also the underlying ingest route for many of our more curated tools, such as our [open source telemetry integrations](/docs/integrations/open-source-telemetry-integrations/get-started/introduction-new-relics-open-source-telemetry-integrations) and our [Telemetry SDKs](/docs/telemetry-data-platform/ingest-apis/telemetry-sdks-report-custom-telemetry-data). 
+Our four primary data ingest APIs are some of the [many solutions for reporting data to New Relic](/docs/telemetry-data-platform/get-started/introduction-new-relic-data-ingest-apis-sdks). These APIs can be used directly, but they're also the underlying ingest route for many of our more curated tools, such as our [open source telemetry integrations](/docs/integrations/open-source-telemetry-integrations/get-started/introduction-new-relics-open-source-telemetry-integrations) and our [Telemetry SDKs](/docs/telemetry-data-platform/ingest-apis/telemetry-sdks-report-custom-telemetry-data). 
 
 <table>
   <thead>
@@ -86,33 +86,31 @@ We have [many solutions for reporting data](/docs/telemetry-data-platform/get-st
   </thead>
 
   <tbody>
+        <tr>
+      <td>
+        [Event API](/docs/insights/insights-data-sources/custom-data/insert-custom-events-insights-api)
+      </td>
+
+      <td>
+        Send event data to New Relic without use of an agent or integration. Also note that our agents have their own methods for sending events. For an overview, see [Send custom events](/docs/telemetry-data-platform/custom-data/custom-events/report-custom-event-data/#ways).
+      </td>
+    </tr>
     <tr>
       <td>
         [Trace API](/docs/apm/distributed-tracing/trace-api/introduction-new-relic-trace-api)
       </td>
 
       <td>
-        Send distributed tracing data to New Relic.
+        Send distributed tracing data to New Relic without use of an agent or integration.
       </td>
     </tr>
-
-    <tr>
-      <td>
-        [Event API](/docs/insights/insights-data-sources/custom-data/insert-custom-events-insights-api)
-      </td>
-
-      <td>
-        Send event data to New Relic.
-      </td>
-    </tr>
-
     <tr>
       <td>
         [Metric API](/docs/introduction-new-relic-metric-api)
       </td>
 
       <td>
-        Send metrics to New Relic from any source (including other telemetry monitoring services).
+        Send metrics to New Relic from any source (including other telemetry monitoring services). 
       </td>
     </tr>
 
@@ -130,7 +128,7 @@ We have [many solutions for reporting data](/docs/telemetry-data-platform/get-st
 
 ## NerdGraph (GraphQL) [#graphql]
 
-NerdGraph is the preferred API for querying New Relic data and making a range of feature configurations. [NerdGraph](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api) is our GraphQL-format API: GraphQL is an efficient and flexible query language that lets you request exactly the data you need, without over-fetching or under-fetching. 
+[NerdGraph](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api) is the recommended API for querying New Relic data and for making feature configurations. NerdGraph is a GraphQL-format API: GraphQL is an efficient and flexible query language that lets you request exactly the data you need, without over-fetching or under-fetching. 
 
 To get started, see [Introduction to NerdGraph](/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph).
 
